@@ -1,0 +1,264 @@
+
+
+$color-white: #fff;
+$semiBold: 600;
+$bold: 700;
+$regular: 400;
+$light: 300;
+
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.top{
+  background-image: url("./images/bg_top.png");
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+  h5{
+    font-size: 14px;
+    color: #008ed6;
+    margin-top: 100px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  h4{
+    font-size: 48px;
+    color: $color-white;
+    margin-bottom: 40px;
+  }
+  p{
+    font-size: 18px;
+    color: #999999;
+    margin-bottom: 65px;
+  }
+  .link_top{
+    font-size: 14px;
+    color: $color-white;
+    list-style: none;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border: 1px solid #4d4e54;
+    border-radius: 5px;
+    margin-right: 20px;
+    &:hover{
+      border: 1px solid #008ed6;
+      background-color: #008ed6;
+    }
+  }
+  .two_iphones{
+    max-width: 425px;
+    max-height: 525px;
+    position: relative;
+    bottom: -115px;
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+.navbar-default{
+  background-image: none;
+  background-color: transparent;
+  border: none;
+}
+.nav-link{
+  color: $color-white!important;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 23px;
+}
+.nav-link{
+  &:after {
+    content: "";
+    display: block;
+    width: 49%;
+    height: 2px;
+    color: #008ed6;
+    margin-top: 13px;
+    z-index: 50;
+    }
+
+}
+.product_overview{
+  text-align: center;
+  border-bottom: 1px solid #ededed;
+  h5{
+    font-size: 14px;
+    color: #008ed6;
+    margin: 65px 0 30px;
+    text-transform: uppercase;
+  }
+  h4{
+    font-size: 36px;
+    color: #1a1a1a;
+    margin-bottom: 70px;
+  }
+  .icon{
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 1px solid #e7e7e7;
+    padding: 20px;
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  .settings{
+    padding-top: 25px;
+  }
+  h6{
+    font-size: 24px;
+    color: #1a1a1a;
+    margin-bottom: 26px;
+  }
+  p{
+    font-size: 18px;
+    color: #999999;
+    margin-bottom: 75px;
+  }
+}
+.dip_into{
+    .I-phones {
+      max-width: 430px;
+      max-height: 550px;
+      margin-top: 65px;
+      margin-bottom: 75px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .right_part {
+      h5 {
+        font-size: 14px;
+        color: #008ed6;
+        margin-top: 120px;
+        margin-bottom: 28px;
+        text-transform: uppercase;
+      }
+
+      h4 {
+        font-size: 36px;
+        color: #1a1a1a;
+        margin-bottom: 35px;
+      }
+
+      p {
+        font-size: 18px;
+        color: #999999;
+        margin-bottom: 40px;
+      }
+
+      ul {
+        li {
+          font-size: 18px;
+          color: #1b1b1b;
+          margin-bottom: 27px;
+          list-style: none;
+
+          .bi {
+            font-size: 17px;
+            color: #44ace1;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+}
+.dip_into_2{
+  background-color: #f2f2f2;
+  padding: 60px 0 40px 0;
+  h5{
+    font-size: 14px;
+    color: #008ed6;
+    margin-top: 120px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+  h4{
+    font-size: 36px;
+    color: #1a1a1a;
+    margin-bottom: 35px;
+  }
+  p{
+    font-size: 18px;
+    color: #999999;
+    margin-bottom: 40px;
+  }
+}
+.quality{
+  text-align: center;
+  background-image: url("./images/bg_hand_with_pensil.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  h5{
+    font-size: 14px;
+    color: #008ed6;
+    text-transform: uppercase;
+    margin: 65px 0 30px;
+  }
+  h4{
+    font-size: 36px;
+    color: $color-white;
+    margin-bottom: 100px;
+  }
+  .owl-carousel{
+    text-align: left;
+    p{
+      font-size: 24px;
+      color: $color-white;
+      font-family: $regular;
+      margin-bottom: 30px;
+    }
+    .avatar{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-block;
+      margin-right: 25px;
+      img{
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+    }
+    .whose_review{
+      display: inline-block;
+      h5{
+        font-size: 16px;
+        color: $color-white;
+        margin: 30px 0 15px;
+      }
+      h6{
+        font-size: 14px;
+        color: $color-white;
+      }
+    }
+  }
+}
+.black{
+  background-color: #15141a;
+  h4{
+    font-size: 36px;
+    color: $color-white;
+  }
+  span{
+    font-weight: $light;
+  }
+  .btn{
+    color: $color-white;
+  }
+}
+
+
+
+
+
+
+
