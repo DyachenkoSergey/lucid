@@ -244,15 +244,34 @@ body{
 }
 .black{
   background-color: #15141a;
+  .container{
+    display: flex;
+    align-items: center;
+  }
   h4{
     font-size: 36px;
     color: $color-white;
+    margin: 75px 45px 75px 0;
+    display: inline-block;
   }
   span{
     font-weight: $light;
   }
-  .btn{
+  .btn_black{
+    font-size: 14px;
     color: $color-white;
+    list-style: none;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border: 1px solid #4d4e54;
+    background-color: transparent;
+    border-radius: 5px;
+    margin-right: 20px;
+    &:hover{
+      border: 1px solid #008ed6;
+      background-color: #008ed6;
+    }
   }
 }
 
