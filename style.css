@@ -213,4 +213,49 @@ body {
       border: 1px solid #008ed6;
       background-color: #008ed6; }
 
+.quality_2 {
+  text-align: center; }
+  .quality_2 h5 {
+    font-size: 14px;
+    color: #008ed6;
+    text-transform: uppercase;
+    margin: 65px 0 30px; }
+  .quality_2 h4 {
+    font-size: 36px;
+    color: #1a1a1a;
+    margin-bottom: 100px; }
+  .quality_2 .left ul {
+    border: 1px solid #e0e0e0;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center; }
+    .quality_2 .left ul li {
+      list-style: none;
+      border-bottom: 1px solid #e0e0e0; }
+      .quality_2 .left ul li:first-of-type {
+        font-size: 24px;
+        color: #1a1a1a;
+        padding: 29px 0 24px; }
+      .quality_2 .left ul li:nth-child(2) {
+        font-size: 48px;
+        color: #1a1a1a;
+        padding: 45px 0 38px; }
+        .quality_2 .left ul li:nth-child(2) span {
+          font-size: 18px;
+          color: #999999; }
+      .quality_2 .left ul li:last-of-type {
+        font-size: 18px;
+        color: #999999;
+        padding: 55px 35px 28px; }
+        .quality_2 .left ul li:last-of-type span {
+          color: #008ed6; }
+        .quality_2 .left ul li:last-of-type button {
+          padding: 20px 40px;
+          margin-top: 47px;
+          text-transform: uppercase;
+          color: #008ed6;
+          background-color: transparent;
+          border: 1px solid #e0e0e0;
+          border-radius: 5px; }
+
 /*# sourceMappingURL=style.css.map */
