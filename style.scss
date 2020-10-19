@@ -6,6 +6,12 @@ $bold: 700;
 $regular: 400;
 $light: 300;
 
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
 
 body{
   font-family: 'Source Sans Pro', sans-serif;
@@ -15,43 +21,37 @@ body{
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
+  header{
+    border: none;
+    padding-top: 40px;
+
+  }
   h5{
     font-size: 14px;
     color: #008ed6;
     margin-top: 100px;
     text-transform: uppercase;
     margin-bottom: 40px;
+    font-weight: $bold;
   }
   h4{
     font-size: 48px;
     color: $color-white;
     margin-bottom: 40px;
+    font-weight: $semiBold;
   }
   p{
     font-size: 18px;
     color: #999999;
     margin-bottom: 65px;
+    font-weight: $regular;
   }
-  .link_top{
-    font-size: 14px;
-    color: $color-white;
-    list-style: none;
-    text-decoration: none;
-    padding: 10px 15px;
-    text-transform: uppercase;
-    border: 1px solid #4d4e54;
-    border-radius: 5px;
-    margin-right: 20px;
-    &:hover{
-      border: 1px solid #008ed6;
-      background-color: #008ed6;
-    }
-  }
+
   .two_iphones{
     max-width: 425px;
     max-height: 525px;
     position: relative;
-    bottom: -115px;
+    bottom: -70px;
     img{
       width: 100%;
       height: 100%;
@@ -59,43 +59,99 @@ body{
     }
   }
 }
+.btn_black{
+  font-size: 14px;
+  color: $color-white;
+  list-style: none;
+  text-decoration: none;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  border: 1px solid #4d4e54;
+  background-color: transparent;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-weight: $bold;
+  &:hover{
+    border: 1px solid #008ed6;
+    background-color: #008ed6;
+  }
+}
 
 .navbar-default{
   background-image: none;
   background-color: transparent;
   border: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  li{
+    &:after{
+      content: "";
+      display: block;
+      width: 70%;
+      height: 3px;
+      background-color: transparent;
+      margin-top: 10px;
+      position: relative;
+      left: 30px;
+      top: 0;
+    }
+    &:before{
+      content: "";
+      display: block;
+      width: 3px;
+      height: 10px;
+      background-color: transparent;
+      position: relative;
+      left: 60px;
+      bottom: -65px;
+      z-index: 2;
+    }
+    &:hover{
+      &:after{
+        background-color: #008ed6;
+      }
+      &:before{
+        background-color: #16151b;
+      }
+    }
+  }
+}
+.navbar-brand{
+  height: 25px;
+  width: 70px;
+  padding: 0;
+  position: relative;
+  bottom: -15px;
+  img{
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 }
 .nav-link{
   color: $color-white!important;
   font-size: 16px;
-  font-weight: 600;
   margin-left: 23px;
-}
-.nav-link{
-  &:after {
-    content: "";
-    display: block;
-    width: 49%;
-    height: 2px;
-    color: #008ed6;
-    margin-top: 13px;
-    z-index: 50;
-    }
-
+  font-weight: $semiBold;
 }
 .product_overview{
   text-align: center;
   border-bottom: 1px solid #ededed;
   h5{
-    font-size: 14px;
-    color: #008ed6;
     margin: 65px 0 30px;
-    text-transform: uppercase;
+    font-weight: $bold;
   }
   h4{
-    font-size: 36px;
-    color: #1a1a1a;
     margin-bottom: 70px;
+    display: inline-block;
+    &:after{
+      position: relative;
+      left: 150px;
+    }
+    &:before{
+      left: 179px!important;
+      bottom: -85px;
+    }
   }
   .icon{
     width: 88px;
@@ -113,11 +169,47 @@ body{
     font-size: 24px;
     color: #1a1a1a;
     margin-bottom: 26px;
+    font-weight: $regular;
   }
   p{
     font-size: 18px;
     color: #999999;
     margin-bottom: 75px;
+    font-weight: $regular;
+  }
+}
+.product_overview,.right_part,.dip_into_2{
+  h5{
+    font-size: 14px;
+    color: #008ed6;
+    text-transform: uppercase;
+  }
+}
+.dip_into_2,.right_part,.product_overview,.quality,.quality_2,.stay_in_touch{
+  h4 {
+    font-size: 36px;
+    color: #1a1a1a;
+    margin-bottom: 35px;
+    font-weight: $semiBold;
+    &:after{
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: #008ed6;
+      margin-top: 40px;
+    }
+    &:before{
+      content: "";
+      display: block;
+      width: 3px;
+      height: 10px;
+      background-color: $color-white;
+      position: relative;
+      left: 29px;
+      bottom: -85px;
+      z-index: 2;
+    }
   }
 }
 .dip_into{
@@ -135,31 +227,24 @@ body{
 
     .right_part {
       h5 {
-        font-size: 14px;
-        color: #008ed6;
-        margin-top: 120px;
-        margin-bottom: 28px;
-        text-transform: uppercase;
+        margin: 120px 0 28px;
+        font-weight: $bold;
       }
-
-      h4 {
-        font-size: 36px;
-        color: #1a1a1a;
-        margin-bottom: 35px;
-      }
-
       p {
         font-size: 18px;
         color: #999999;
         margin-bottom: 40px;
+        font-weight: $regular;
       }
 
       ul {
+        padding: 0;
         li {
           font-size: 18px;
           color: #1b1b1b;
           margin-bottom: 27px;
           list-style: none;
+          font-weight: $regular;
 
           .bi {
             font-size: 17px;
@@ -174,21 +259,19 @@ body{
   background-color: #f2f2f2;
   padding: 60px 0 40px 0;
   h5{
-    font-size: 14px;
-    color: #008ed6;
-    margin-top: 120px;
-    margin-bottom: 28px;
-    text-transform: uppercase;
+    margin: 120px 0 0 0;
+    font-weight: $bold;
   }
-  h4{
-    font-size: 36px;
-    color: #1a1a1a;
-    margin-bottom: 35px;
+  h4 {
+    &:before{
+      background-color: #f2f2f2;
+    }
   }
   p{
     font-size: 18px;
     color: #999999;
     margin-bottom: 40px;
+    font-weight: $regular;
   }
 }
 .quality{
@@ -201,11 +284,23 @@ body{
     color: #008ed6;
     text-transform: uppercase;
     margin: 65px 0 30px;
+    font-weight: $bold;
   }
   h4{
-    font-size: 36px;
     color: $color-white;
     margin-bottom: 100px;
+    display: inline-block;
+    &:after{
+      position: relative;
+      left: 90px;
+    }
+    &:before{
+      height: 3px;
+      background-color: #53565c;
+      position: relative;
+      left: 120px;
+      bottom: -82px;
+    }
   }
   .owl-carousel{
     text-align: left;
@@ -251,6 +346,8 @@ body{
       overflow: hidden;
       display: inline-block;
       margin-right: 25px;
+      position: relative;
+      bottom: -20px;
       img{
         height: 100%;
         width: 100%;
@@ -264,10 +361,12 @@ body{
         font-size: 16px;
         color: $color-white;
         margin: 30px 0 15px;
+        font-weight: $regular;
       }
       h6{
         font-size: 14px;
         color: $color-white;
+        font-weight: $bold;
       }
     }
   }
@@ -283,26 +382,12 @@ body{
     color: $color-white;
     margin: 75px 45px 75px 0;
     display: inline-block;
+    font-weight: $semiBold;
   }
   span{
     font-weight: $light;
   }
-  .btn_black{
-    font-size: 14px;
-    color: $color-white;
-    list-style: none;
-    text-decoration: none;
-    padding: 10px 15px;
-    text-transform: uppercase;
-    border: 1px solid #4d4e54;
-    background-color: transparent;
-    border-radius: 5px;
-    margin-right: 20px;
-    &:hover{
-      border: 1px solid #008ed6;
-      background-color: #008ed6;
-    }
-  }
+
 }
 .quality_2{
   text-align: center;
@@ -312,11 +397,19 @@ body{
     color: #008ed6;
     text-transform: uppercase;
     margin: 65px 0 30px;
+    font-weight: $bold;
   }
   h4{
-    font-size: 36px;
-    color: #1a1a1a;
     margin-bottom: 100px;
+    display: inline-block;
+    &:after{
+      position: relative;
+      left: 80px;
+    }
+    &:before{
+      position: relative;
+      left: 109px;
+    }
   }
   .left,.second,.right,.third{
     ul{
@@ -331,20 +424,24 @@ body{
           font-size: 24px;
           color: #1a1a1a;
           padding: 29px 0 24px;
+          font-weight: $bold;
         }
         &:nth-child(2) {
           font-size: 48px;
           color: #1a1a1a;
           padding: 45px 0 38px;
+          font-weight: $bold;
           span{
             font-size: 18px;
             color: #999999;
+            font-weight: $semiBold;
           }
         }
         &:last-of-type {
           font-size: 18px;
           color: #999999;
           padding: 55px 35px 28px;
+          font-weight: $regular;
           span{
             color: #008ed6;
           }
@@ -356,6 +453,7 @@ body{
             background-color: transparent;
             border: 1px solid #e0e0e0;
             border-radius: 5px;
+            font-weight: $bold;
           }
         }
       }
@@ -391,11 +489,20 @@ body{
     color: #008ed6;
     text-transform: uppercase;
     margin: 65px 0 60px;
+    font-weight: $bold;
   }
   h4{
-    font-size: 36px;
-    color: #1a1a1a;
     margin-bottom: 100px;
+    &:after{
+      position: relative;
+      left: 550px;
+    }
+    &:before{
+      background-color: #ededed;
+      position: relative;
+      left: 580px;
+      bottom: -85px;
+    }
   }
   .fas,.far{
     color: #008ed6;
@@ -406,8 +513,11 @@ body{
     font-size: 18px;
     color: #999999;
     line-height: 26px;
+    font-weight: $regular;
   }
   form{
+    position: relative;
+    bottom: -40px;
     background-color: #15141a;
     padding: 60px 86px 40px 65px;
     .form-control{
@@ -418,10 +528,12 @@ body{
       font-size: 14px;
       padding: 20px;
       margin-bottom: 20px;
+      font-weight: $bold;
     }
     textarea{
-      height: 165px;
+      height: 205px;
       resize: none;
+      font-weight: $bold;
     }
     .btn{
       background-color: #008ed6;
@@ -429,6 +541,7 @@ body{
       color: $color-white;
       padding: 10px 15px;
       text-transform: uppercase;
+      font-weight: $bold;
     }
   }
 }
@@ -454,6 +567,7 @@ footer{
     color: #444348;
     margin-bottom: 45px;
     text-transform: uppercase;
+    font-weight: $semiBold;
   }
 }
 
