@@ -6,6 +6,28 @@ body {
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 1024px) {
+    .top {
+      height: 60vh; } }
+  @media screen and (max-width: 992px) {
+    .top {
+      height: 200vh;
+      text-align: center; } }
+  @media screen and (max-width: 768px) {
+    .top {
+      height: 100vh; } }
+  @media screen and (max-width: 420px) {
+    .top {
+      height: 150vh; } }
+  @media screen and (max-width: 375px) {
+    .top {
+      height: 100vh; } }
+  @media screen and (max-width: 360px) {
+    .top {
+      height: 100vh; } }
+  @media screen and (max-width: 320px) {
+    .top {
+      height: 150vh; } }
   .top header {
     border: none;
     padding-top: 40px; }
@@ -16,25 +38,62 @@ body {
     text-transform: uppercase;
     margin-bottom: 40px;
     font-weight: 700; }
+    @media screen and (max-width: 992px) {
+      .top h5 {
+        margin-bottom: 20px; } }
+    @media screen and (max-width: 320px) {
+      .top h5 {
+        margin-top: 50px; } }
   .top h4 {
     font-size: 48px;
     color: #fff;
     margin-bottom: 40px;
     font-weight: 600; }
+    @media screen and (max-width: 992px) {
+      .top h4 {
+        margin-bottom: 20px;
+        font-size: 30px; } }
   .top p {
     font-size: 18px;
     color: #999999;
     margin-bottom: 65px;
     font-weight: 400; }
+    @media screen and (max-width: 992px) {
+      .top p {
+        margin-bottom: 10px;
+        font-size: 15px; } }
   .top .two_iphones {
     max-width: 425px;
     max-height: 525px;
     position: relative;
-    bottom: -70px; }
+    bottom: -100px; }
+    @media screen and (max-width: 1024px) {
+      .top .two_iphones {
+        bottom: -250px; } }
+    @media screen and (max-width: 992px) {
+      .top .two_iphones {
+        bottom: -165px; } }
+    @media screen and (max-width: 768px) {
+      .top .two_iphones {
+        bottom: -150px; } }
+    @media screen and (max-width: 420px) {
+      .top .two_iphones {
+        bottom: -180px; } }
+    @media screen and (max-width: 375px) {
+      .top .two_iphones {
+        top: 40px; } }
+    @media screen and (max-width: 360px) {
+      .top .two_iphones {
+        top: 40px; } }
+    @media screen and (max-width: 320px) {
+      .top .two_iphones {
+        top: 60px; } }
     .top .two_iphones img {
       width: 100%;
       height: 100%;
-      display: block; }
+      display: block;
+      position: relative;
+      z-index: 1; }
 
 .btn_black {
   font-size: 14px;
@@ -51,6 +110,11 @@ body {
   .btn_black:hover {
     border: 1px solid #008ed6;
     background-color: #008ed6; }
+  @media screen and (max-width: 992px) {
+    .btn_black {
+      font-size: 10px;
+      padding: 5px 10px;
+      display: inline-block; } }
 
 .navbar-default {
   background-image: none;
@@ -102,7 +166,10 @@ body {
 
 .product_overview {
   text-align: center;
-  border-bottom: 1px solid #ededed; }
+  background-color: #fff;
+  border-bottom: 1px solid #ededed;
+  position: relative;
+  z-index: 5; }
   .product_overview h5 {
     margin: 65px 0 30px;
     font-weight: 700; }
@@ -112,9 +179,19 @@ body {
     .product_overview h4:after {
       position: relative;
       left: 150px; }
+      @media screen and (max-width: 375px) {
+        .product_overview h4:after {
+          left: 130px; } }
+      @media screen and (max-width: 320px) {
+        .product_overview h4:after {
+          left: 110px; } }
     .product_overview h4:before {
       left: 179px !important;
       bottom: -85px; }
+      @media screen and (max-width: 320px) {
+        .product_overview h4:before {
+          left: 139px !important;
+          bottom: -122px !important; } }
   .product_overview .icon {
     width: 88px;
     height: 88px;
@@ -175,6 +252,9 @@ body {
 .dip_into .right_part h5 {
   margin: 120px 0 28px;
   font-weight: 700; }
+@media screen and (max-width: 420px) {
+  .dip_into .right_part h4:before {
+    bottom: -122px; } }
 .dip_into .right_part p {
   font-size: 18px;
   color: #999999;
@@ -201,11 +281,20 @@ body {
     font-weight: 700; }
   .dip_into_2 h4:before {
     background-color: #f2f2f2; }
+    @media screen and (max-width: 420px) {
+      .dip_into_2 h4:before {
+        bottom: -122px; } }
   .dip_into_2 p {
     font-size: 18px;
     color: #999999;
     margin-bottom: 40px;
     font-weight: 400; }
+  .dip_into_2 .iphone_img {
+    width: 100%;
+    max-height: 420px; }
+    .dip_into_2 .iphone_img img {
+      width: 100%;
+      height: 100%; }
 
 .quality {
   text-align: center;
@@ -287,16 +376,25 @@ body {
         font-weight: 700; }
 
 .black {
-  background-color: #15141a; }
+  background-color: #15141a;
+  padding-bottom: 20px; }
   .black .container {
     display: flex;
     align-items: center; }
+    @media screen and (max-width: 420px) {
+      .black .container {
+        display: block;
+        text-align: center; } }
   .black h4 {
     font-size: 36px;
     color: #fff;
     margin: 75px 45px 75px 0;
     display: inline-block;
     font-weight: 600; }
+    @media screen and (max-width: 320px) {
+      .black h4 {
+        font-size: 25px;
+        margin: 40px 20px 40px 0; } }
   .black span {
     font-weight: 300; }
 
@@ -323,6 +421,9 @@ body {
     margin-bottom: 0;
     padding: 0;
     text-align: center; }
+    @media screen and (max-width: 992px) {
+      .quality_2 .left ul, .quality_2 .second ul, .quality_2 .right ul, .quality_2 .third ul {
+        margin-bottom: 20px; } }
     .quality_2 .left ul li, .quality_2 .second ul li, .quality_2 .right ul li, .quality_2 .third ul li {
       list-style: none;
       border-bottom: 1px solid #e0e0e0; }
@@ -381,11 +482,41 @@ body {
     .stay_in_touch h4:after {
       position: relative;
       left: 550px; }
+      @media screen and (max-width: 992px) {
+        .stay_in_touch h4:after {
+          left: 450px; } }
+      @media screen and (max-width: 768px) {
+        .stay_in_touch h4:after {
+          left: 350px; } }
+      @media screen and (max-width: 420px) {
+        .stay_in_touch h4:after {
+          left: 170px; } }
+      @media screen and (max-width: 360px) {
+        .stay_in_touch h4:after {
+          left: 150px; } }
+      @media screen and (max-width: 320px) {
+        .stay_in_touch h4:after {
+          left: 130px; } }
     .stay_in_touch h4:before {
       background-color: #ededed;
       position: relative;
       left: 580px;
       bottom: -85px; }
+      @media screen and (max-width: 992px) {
+        .stay_in_touch h4:before {
+          left: 480px; } }
+      @media screen and (max-width: 768px) {
+        .stay_in_touch h4:before {
+          left: 380px; } }
+      @media screen and (max-width: 420px) {
+        .stay_in_touch h4:before {
+          left: 200px; } }
+      @media screen and (max-width: 360px) {
+        .stay_in_touch h4:before {
+          left: 180px; } }
+      @media screen and (max-width: 320px) {
+        .stay_in_touch h4:before {
+          left: 160px; } }
   .stay_in_touch .fas, .stay_in_touch .far {
     color: #008ed6;
     font-size: 32px;
@@ -426,7 +557,8 @@ body {
   height: 320px; }
 
 footer {
-  background-color: #15141a; }
+  background-color: #15141a;
+  text-align: center; }
   footer a {
     list-style: none; }
     footer a .fab {

@@ -21,6 +21,28 @@ body{
   background-size: cover;
   height: 100vh;
   background-repeat: no-repeat;
+  @include max-screen(1024px){
+    height: 60vh;
+  }
+  @include max-screen(992px){
+    height: 200vh;
+    text-align: center;
+  }
+  @include max-screen(768px){
+    height: 100vh;
+  }
+  @include max-screen(420px){
+    height: 150vh;
+  }
+  @include max-screen(375px){
+    height: 100vh;
+  }
+  @include max-screen(360px){
+    height: 100vh;
+  }
+  @include max-screen(320px){
+    height: 150vh;
+  }
   header{
     border: none;
     padding-top: 40px;
@@ -33,29 +55,66 @@ body{
     text-transform: uppercase;
     margin-bottom: 40px;
     font-weight: $bold;
+    @include max-screen(992px){
+      margin-bottom: 20px;
+    }
+    @include max-screen(320px){
+      margin-top: 50px;
+    }
   }
   h4{
     font-size: 48px;
     color: $color-white;
     margin-bottom: 40px;
     font-weight: $semiBold;
+    @include max-screen(992px){
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
   }
   p{
     font-size: 18px;
     color: #999999;
     margin-bottom: 65px;
     font-weight: $regular;
+    @include max-screen(992px){
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
   }
 
   .two_iphones{
     max-width: 425px;
     max-height: 525px;
     position: relative;
-    bottom: -70px;
+    bottom: -100px;
+    @include max-screen(1024px){
+      bottom: -250px;
+    }
+    @include max-screen(992px){
+      bottom: -165px;
+    }
+    @include max-screen(768px){
+      bottom: -150px;
+    }
+    @include max-screen(420px){
+      bottom: -180px;
+    }
+    @include max-screen(375px){
+      top: 40px;
+    }
+    @include max-screen(360px){
+      top: 40px;
+    }
+    @include max-screen(320px){
+      top: 60px;
+    }
     img{
       width: 100%;
       height: 100%;
       display: block;
+      position: relative;
+      z-index: 1;
     }
   }
 }
@@ -74,6 +133,11 @@ body{
   &:hover{
     border: 1px solid #008ed6;
     background-color: #008ed6;
+  }
+  @include max-screen(992px){
+    font-size: 10px;
+    padding: 5px 10px;
+    display: inline-block;
   }
 }
 
@@ -136,7 +200,10 @@ body{
 }
 .product_overview{
   text-align: center;
+  background-color: $color-white;
   border-bottom: 1px solid #ededed;
+  position: relative;
+  z-index: 5;
   h5{
     margin: 65px 0 30px;
     font-weight: $bold;
@@ -147,10 +214,20 @@ body{
     &:after{
       position: relative;
       left: 150px;
+      @include max-screen(375px){
+        left: 130px;
+      }
+      @include max-screen(320px){
+        left: 110px;
+      }
     }
     &:before{
       left: 179px!important;
       bottom: -85px;
+      @include max-screen(320px){
+        left: 139px!important;
+        bottom: -122px!important;
+      }
     }
   }
   .icon{
@@ -230,6 +307,13 @@ body{
         margin: 120px 0 28px;
         font-weight: $bold;
       }
+      h4{
+        &:before{
+          @include max-screen(420px){
+            bottom: -122px;
+          }
+        }
+      }
       p {
         font-size: 18px;
         color: #999999;
@@ -265,6 +349,9 @@ body{
   h4 {
     &:before{
       background-color: #f2f2f2;
+      @include max-screen(420px){
+        bottom: -122px;
+      }
     }
   }
   p{
@@ -272,6 +359,14 @@ body{
     color: #999999;
     margin-bottom: 40px;
     font-weight: $regular;
+  }
+  .iphone_img{
+    width: 100%;
+    max-height: 420px;
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 .quality{
@@ -373,9 +468,14 @@ body{
 }
 .black{
   background-color: #15141a;
+  padding-bottom: 20px;
   .container{
     display: flex;
     align-items: center;
+    @include max-screen(420px){
+      display: block;
+      text-align: center;
+    }
   }
   h4{
     font-size: 36px;
@@ -383,6 +483,10 @@ body{
     margin: 75px 45px 75px 0;
     display: inline-block;
     font-weight: $semiBold;
+    @include max-screen(320px){
+      font-size: 25px;
+      margin: 40px 20px 40px 0;
+    }
   }
   span{
     font-weight: $light;
@@ -417,6 +521,9 @@ body{
       margin-bottom: 0;
       padding: 0;
       text-align: center;
+      @include max-screen(992px){
+        margin-bottom: 20px;
+      }
       li{
         list-style: none;
         border-bottom: 1px solid #e0e0e0;
@@ -496,12 +603,43 @@ body{
     &:after{
       position: relative;
       left: 550px;
+      @include max-screen(992px){
+        left: 450px;
+      }
+      @include max-screen(768px){
+        left: 350px;
+      }
+      @include max-screen(420px){
+        left: 170px;
+      }
+      @include max-screen(360px){
+        left: 150px;
+      }
+      @include max-screen(320px){
+        left: 130px;
+      }
     }
+
     &:before{
       background-color: #ededed;
       position: relative;
       left: 580px;
       bottom: -85px;
+      @include max-screen(992px){
+        left: 480px;
+      }
+      @include max-screen(768px){
+        left: 380px;
+      }
+      @include max-screen(420px){
+        left: 200px;
+      }
+      @include max-screen(360px){
+        left: 180px;
+      }
+      @include max-screen(320px){
+        left: 160px;
+      }
     }
   }
   .fas,.far{
@@ -551,6 +689,7 @@ body{
 }
 footer{
   background-color: #15141a;
+  text-align: center;
   a{
     list-style: none;
     .fab{
